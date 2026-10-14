@@ -8936,3 +8936,144 @@ img{
 		font-size:13px;
 	}
 }
+
+/*** 
+====================================================================
+	About Us / Why Choose Us section responsive
+====================================================================
+***/
+
+@media only screen and (max-width: 1199px){
+	/* stacked columns: space between About Us block and Why Choose Us block */
+	.feature-style-1 .testimonial_container{
+		margin-bottom:50px;
+	}
+	.feature-style-1 .company{
+		padding-left:15px;
+	}
+	.feature-style-1 .company .tab-content ul{
+		margin-top:14px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+
+	.feature-style-1{
+		padding:50px 0px;
+	}
+	.feature-style-1 .sec-title{
+		margin-bottom:25px;
+	}
+	.feature-style-1 .sec-title h2{
+		font-size:26px;
+	}
+
+	/* ---------- About Us ---------- */
+	.feature-style-1 .testimonial_container{
+		padding-right:15px;
+		margin-bottom:45px;
+	}
+	.feature-style-1 .content h3{
+		font-size:18px;
+		line-height:1.5em;
+	}
+	.feature-style-1 .content br{
+		display:none;
+	}
+	.feature-style-1 .content h3{
+		margin-bottom:15px;
+	}
+	.feature-style-1 .content ul{
+		font-size:14px;
+		margin-bottom:20px;
+	}
+	/* author + signature: one tidy row, signature scaled down */
+	.feature-style-1 .column .inner .author-info{
+		float:none !important;
+		padding-left:85px;
+		padding-top:8px;
+		min-height:76px;
+		margin-bottom:15px;
+	}
+	.feature-style-1 .column .inner .signature{
+		float:none !important;
+		margin-top:5px;
+	}
+	.feature-style-1 .signature-inner{
+		margin-right:0px;
+	}
+	.feature-style-1 .signature-inner img{
+		display:block;
+		width:auto;
+		max-width:200px;
+		height:auto;
+	}
+
+	/* ---------- Why Choose Us ---------- */
+	.feature-style-1 .company{
+		padding:0px 15px;
+	}
+
+	/* tabs: three compact pills in one row */
+	.feature-style-1 .company .nav.nav-pills.nav-justified{
+		display:flex;
+		width:100%;
+		margin:0px 0px 20px;
+	}
+	.feature-style-1 .company .nav-justified > li{
+		display:block;
+		float:none;
+		flex:1 1 0;
+		width:auto;
+		margin:0px;
+	}
+	.feature-style-1 .company .nav li a{
+		margin:0px;
+		padding:10px 4px;
+		font-size:14px;
+		line-height:1.3em;
+		text-align:center;
+	}
+
+	.feature-style-1 .company .tab-content h3{
+		font-size:17px;
+		padding-top:5px;
+		padding-bottom:8px;
+	}
+	.feature-style-1 .company .tab-content p{
+		font-size:15px;
+		line-height:1.7em;
+	}
+
+	/* check lists: two neat columns, no big indent */
+	.feature-style-1 .company .tab-content ul{
+		display:inline-block;
+		vertical-align:top;
+		width:49%;
+		margin:12px 0px 0px;
+		padding:0px;
+	}
+	.feature-style-1 .company .tab-content .list-two{
+		padding-left:0px;
+	}
+	.feature-style-1 .company .tab-content ul li{
+		font-size:14px;
+		line-height:1.5em;
+		margin-bottom:8px;
+	}
+	.feature-style-1 .company .tab-content ul li i{
+		margin-right:8px;
+	}
+}
+
+@media only screen and (max-width: 349px){
+	/* very narrow phones: lists stack */
+	.feature-style-1 .company .tab-content ul{
+		display:block;
+		width:100%;
+		margin-top:8px;
+	}
+	.feature-style-1 .company .nav li a{
+		font-size:13px;
+	}
+}
