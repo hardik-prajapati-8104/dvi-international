@@ -180,22 +180,55 @@
         </div>
     </section>
     
+    <!-- Google Map Section -->
     <section class="map-section">
-    	<!--Map Outer-->
         <div class="map-outer">
-            <!--Map Canvas-->
-            <div class="map-canvas"
-                data-zoom="12"
-                data-lat="-37.817085"
-                data-lng="144.955631"
-                data-type="roadmap"
-                data-hue="#ffc400"
-                data-title="Envato"
-                data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
-            </div>
+            <iframe
+                src="https://maps.google.com/maps?q=Melbourne%20VIC%203000%2C%20Australia&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Map - Melbourne Australia">
+            </iframe>
         </div>
     </section>
-    
+
+    <style>
+            /* Google Map Section */
+            .map-section {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .map-outer {
+                width: 100%;
+                height: 450px;
+                overflow: hidden;
+                border-radius: 12px;
+                background: #f4f4f4;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            }
+
+            .map-outer iframe {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 767px) {
+                .map-outer {
+                    height: 320px;
+                    border-radius: 8px;
+                }
+            } 
+    </style>
+
     <!-- footer top area -->
     <section class="footer-top-area_professional">
         <div class="container">
@@ -381,8 +414,6 @@
 <script src="assets/js/validate.js"></script>
 <script src="assets/js/script.js"></script>
 
-<!--Google Map APi Key-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
 <script src="assets/js/map-script.js"></script>
 <!--End Google Map APi-->
 
