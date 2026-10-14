@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>DVI INTERNATIONAL - Contact Us</title>
-<!-- Stylesheets -->
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/revolution-slider.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="assets/css/responsive.css" rel="stylesheet"> 
+    <meta charset="utf-8">
+    <title>DVI INTERNATIONAL - Contact Us</title>
+    <!-- Stylesheets -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/revolution-slider.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- Contact page sticky-header fix -->
+    <style>
+        @media (min-width: 1024px) {
+            .main-header_professional.fixed-header .main-box {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 9999;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="page-wrapper">
  	
-    <!-- Preloader -->
-    <!-- <div class="preloader"></div> -->
- 	
-    <!-- Main Header-->
+        <!-- Preloader -->
+        <!-- <div class="preloader"></div> -->
+        
+        <!-- Main Header-->
         <header class="main-header_professional">
             <!-- Header Top -->
             <div class="header-top-one">
@@ -416,9 +429,25 @@
 <script src="assets/js/appear.js"></script>
 <script src="assets/js/validate.js"></script>
 <script src="assets/js/script.js"></script>
+<script>
+    // Keep Contact page header behavior in sync with the other site pages.
+    (function ($) {
+        if (!$) return;
+        var $header = $('.main-header_professional');
+        if (!$header.length) return;
 
-<script src="assets/js/map-script.js"></script>
-<!--End Google Map APi-->
+        function syncContactStickyHeader() {
+            if (window.innerWidth >= 1024) {
+                $header.toggleClass('fixed-header', $(window).scrollTop() >= 200);
+            } else {
+                $header.removeClass('fixed-header');
+            }
+        }
 
+        $(window).on('scroll.contactStickyHeader resize.contactStickyHeader', syncContactStickyHeader);
+        syncContactStickyHeader();
+    })(window.jQuery);
+</script>
+<script src="assets/js/map-script.js"></script> 
 </body>
 </html>
