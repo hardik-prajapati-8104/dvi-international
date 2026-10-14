@@ -3023,7 +3023,7 @@ img{
 .main-footer_professional{
 	position:relative;
 	color:#9b9b9b;
-	background: #1d1d1d;
+	background: #fff;
 }
 
 .main-footer_professional .footer-upper{
@@ -3043,7 +3043,7 @@ img{
 	line-height:30px;
 	margin-bottom:32px;
 	padding-bottom: 15px;
-	color:#ffffff;
+	color:#000;
 	text-transform: capitalize;
 	font-weight: 600;
 }
@@ -3073,7 +3073,7 @@ img{
 }
 
 .main-footer_professional .footer-upper a:hover{
-	color:#ffffff;	
+	color:#000;	
 }
 
 .footer-upper .links-widget li{
@@ -3100,7 +3100,7 @@ img{
 	top: -2px;
 }
 .footer-upper .links-widget li a:hover{
-	color:#ffffff;	
+	color:#000;	
 }
 
 .main-footer_professional .social-links a{
@@ -3123,7 +3123,7 @@ img{
 }
 
 .main-footer .social-links a:hover{
-	color:#ffffff;
+	color:#000;
 	background:#48c7ec;	
 }
 
@@ -3150,7 +3150,7 @@ img{
 
 .footer-upper .twitter-feeds .feed .time{
 	position:relative;
-	color:#ffffff;
+	color:#000;
 	font-size:14px;
 	text-transform:capitalize;
 	font-weight:700;
@@ -3184,7 +3184,7 @@ img{
 	width:100%;
 	line-height: 20px;
 	padding:11px 50px 11px 15px;
-	background: #ffffff;
+	background: #000;
 	border:1px solid rgba(255,255,255,0.05);
 	border-radius:5px;
 }
@@ -3204,7 +3204,7 @@ img{
 	line-height: 44px;
 	text-align:center;
 	font-size: 16px;
-	color:#ffffff;
+	color:#000;
 	background: #48c7ec;
 	border-radius:0px 5px 5px 0px;
 }
@@ -3232,7 +3232,7 @@ img{
 
 .main-footer_professional .contact-info li h4{
 	font-size:16px;
-	color:#ffffff;
+	color:#000;
 	margin-bottom:5px;	
 }
 
@@ -3263,7 +3263,7 @@ img{
     left: 0;
     font-family: FontAwesome;
     top: 0;
-    color: #fff;
+    color: #000;
     right: 0;
     display: flex;
     bottom: 0;
@@ -8437,5 +8437,63 @@ img{
 	}
 	.term-block h3{
 		font-size:18px;
+	}
+}
+
+
+/*** 
+====================================================================
+	Header fix: logo + menu always vertically centred, no extra space
+====================================================================
+***/
+
+@media only screen and (min-width: 1141px){
+	/* one flex row: logo left, menu right, both centred on the same line */
+	.main-header_professional .main-box .outer-container{
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+	}
+	.main-header_professional .main-box .outer-container:before,
+	.main-header_professional .main-box .outer-container:after{
+		display:none;
+	}
+
+	/* logo: fixed, sensible height; header height = logo + padding */
+	.main-header_professional .main-box .logo-box{
+		float:none;
+		padding:14px 0px;
+	}
+	.main-header_professional .main-box .logo-box .logo img{
+		display:block;
+		height:60px;
+		width:auto;
+		max-width:none;
+	}
+
+	/* menu: stretch to full header height so dropdowns still open flush under the bar */
+	.main-header_professional .nav-outer{
+		float:none;
+		align-self:stretch;
+		display:flex;
+	}
+	.main-header_professional .main-menu,
+	.main-header_professional .main-menu .navbar-collapse,
+	.main-header_professional .main-menu .navigation{
+		display:flex !important;
+		align-items:stretch;
+	}
+	.main-header_professional .main-menu .navigation > li{
+		display:flex;
+		align-items:center;
+		padding:0px;
+	}
+
+	/* sticky header on scroll */
+	.main-header_professional.fixed-header .main-box .logo-box{
+		padding:8px 0px;
+	}
+	.main-header_professional.fixed-header .main-box .logo-box .logo img{
+		height:50px;
 	}
 }
