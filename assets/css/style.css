@@ -3420,6 +3420,7 @@ img{
 
 
 
+
 /*** 
 =============================================
     Latest Blog-v2 Area style
@@ -3479,10 +3480,6 @@ img{
     font-size: 14px;
     margin: 0;
 }
-
-
-
-
 
 
 /*** 
@@ -8495,5 +8492,137 @@ img{
 	}
 	.main-header_professional.fixed-header .main-box .logo-box .logo img{
 		height:50px;
+	}
+}
+
+
+/*** 
+====================================================================
+	Header responsive (tablet + mobile): logo size, hamburger, top bar
+====================================================================
+***/
+
+/* tablet: centred logo above the menu, but not oversized */
+@media only screen and (min-width: 768px) and (max-width: 1140px){
+	.main-header_professional .main-box .logo-box .logo img{
+		display:inline-block;
+		height:56px;
+		width:auto;
+		max-width:none;
+	}
+	.main-header_professional .main-box .logo-box{
+		padding:14px 0px 0px;
+	}
+	.main-header_professional .nav-outer{
+		float:none;
+		width:100%;
+		text-align:center;
+	}
+	.main-header_professional .main-menu .navigation{
+		text-align:center;
+	}
+	.main-header_professional .main-menu .navigation > li{
+		padding:14px 0px;
+		margin:0px 12px;
+	}
+}
+
+/* mobile: logo left + hamburger right on ONE row, menu drops below */
+@media only screen and (max-width: 767px){
+
+	/* compact top bar: hide welcome text, small contact line */
+	.main-header_professional .header-top-one{
+		padding:6px 0px;
+	}
+	.main-header_professional .header-top-one .top-left{
+		display:none;
+	}
+	.main-header_professional .header-top-one .top-right,
+	.main-header_professional .header-top-one .top-right ul{
+		float:none;
+		width:100%;
+		text-align:center;
+	}
+	.main-header_professional .header-top-one .top-links ul li{
+		float:none;
+		display:inline-block;
+		padding:2px 0px;
+		margin:0px 8px;
+		font-size:13px;
+		line-height:20px;
+	}
+	/* location is the least useful on small screens */
+	.main-header_professional .header-top-one .top-right ul li:last-child{
+		display:none;
+	}
+
+	/* one flex row */
+	.main-header_professional .main-box .outer-container{
+		display:flex;
+		flex-wrap:wrap;
+		align-items:center;
+		justify-content:space-between;
+	}
+	.main-header_professional .main-box .outer-container:before,
+	.main-header_professional .main-box .outer-container:after{
+		display:none;
+	}
+
+	/* logo: left, small, never stretched */
+	.main-header_professional .main-box .outer-container .logo-box{
+		float:none;
+		width:auto !important;
+		text-align:left;
+		padding:10px 0px;
+	}
+	.main-header_professional .main-box .logo-box .logo img{
+		display:block;
+		height:46px;
+		width:auto;
+		max-width:none;
+	}
+
+	/* hamburger: right, same row. nav wrappers dissolve so the
+	   button and the dropdown list become direct flex items */
+	.main-header_professional .nav-outer,
+	.main-header_professional .main-menu{
+		display:contents;
+	}
+	.main-header_professional .main-menu .navbar-header{
+		width:auto;
+		order:2;
+		margin:0px;
+	}
+	.main-header_professional .main-menu .navbar-header .navbar-toggle{
+		margin:0px;
+		padding:10px;
+		float:none;
+	}
+	/* opened menu: full-width row under the logo/hamburger */
+	.main-header_professional .main-menu .navbar-collapse{
+		order:3;
+		flex:0 0 100%;
+		width:100%;
+		max-height:none;
+		margin:0px 0px 12px;
+		padding:0px;
+		overflow:visible;
+	}
+	.main-header_professional .main-menu .navbar-collapse.collapse:not(.in){
+		display:none !important;
+	}
+	.main-header_professional .main-menu .navbar-collapse.in{
+		display:block !important;
+	}
+}
+
+/* very small phones */
+@media only screen and (max-width: 380px){
+	.main-header_professional .main-box .logo-box .logo img{
+		height:40px;
+	}
+	.main-header_professional .header-top-one .top-links ul li{
+		font-size:12px;
+		margin:0px 5px;
 	}
 }
