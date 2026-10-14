@@ -1,0 +1,28 @@
+/* Privacy Policy page – extends the Professional theme (accent #48c7ec) */
+.privacy-section{padding:80px 0 60px;}
+/* Fixed (sticky) sidebar: columns must stretch to equal height so the sidebar has room to travel */
+.privacy-sidebar{position:-webkit-sticky;position:sticky;top:110px;margin-bottom:40px;max-height:calc(100vh - 130px);overflow-y:auto;}
+.privacy-sidebar .sidebar-widget{margin-bottom:0;}
+.privacy-sidebar .list{margin-bottom:0;}
+.privacy-sidebar .list li a{padding:10px 20px 10px 30px;font-size:15px;}
+.privacy-content .sec-title{margin-bottom:30px;}
+.privacy-block{padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid #e0e0e0;scroll-margin-top:110px;}
+.privacy-block:last-child{border-bottom:0;margin-bottom:0;}
+.privacy-block h3{font-size:22px;font-weight:700;color:#333;margin:0 0 15px;line-height:1.4em;}
+.privacy-block h3 .num{display:inline-block;min-width:44px;height:44px;line-height:44px;margin-right:14px;text-align:center;font-size:16px;color:#fff;background:#48c7ec;border-radius:2px;vertical-align:middle;}
+.privacy-block p{font-size:15px;line-height:1.9em;color:#777;margin-bottom:12px;}
+.privacy-block p strong,.privacy-list li strong{color:#333;}
+.privacy-list{list-style:none;padding:0;margin:0 0 12px;}
+.privacy-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:15px;line-height:1.8em;color:#777;}
+.privacy-list li:before{content:"\f00c";font-family:FontAwesome;position:absolute;left:0;top:0;color:#48c7ec;font-size:13px;}
+.privacy-contact{background:#f6f6f6;border-left:4px solid #48c7ec;padding:22px 26px;margin-top:10px;}
+.privacy-contact ul{list-style:none;padding:0;margin:0;}
+.privacy-contact li{font-size:15px;color:#777;line-height:1.8em;margin-bottom:6px;}
+.privacy-contact li span{color:#48c7ec;margin-right:8px;font-size:16px;}
+.privacy-contact li strong{color:#333;}
+@media (min-width:992px){
+  .privacy-row{display:flex;flex-wrap:wrap;align-items:stretch;}
+  .privacy-row:before,.privacy-row:after{display:none;content:none;}
+  .privacy-row .sidebar-side,.privacy-row .content-side{float:none;}
+}
+@media (max-width:991px){.privacy-sidebar{position:static;max-height:none;overflow:visible;}}
