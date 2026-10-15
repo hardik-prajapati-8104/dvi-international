@@ -10,15 +10,23 @@
                         <!--Top Left-->
                         <div class="top-left top-links">
                             <ul class="clearfix">
-                                <li> <i class="flaticon-placeholder-2"> </i>Business center,sharjah publishing city free zone.sharjah,united Arab Emirates</li>
+                                <li> <i class="flaticon-placeholder-2"> </i>
+                                Business center,sharjah publishing city free zone.sharjah,united Arab Emirates
+                            </li>
                             </ul>
                         </div>
 
                         <!--Top Right-->
                         <div class="top-right top-links">
                             <ul class="clearfix">
-                                <li> <i class="flaticon-telephone-1"></i>+971 569354803</li>
-                                <li> <i class="flaticon-email-filled-closed-envelope"></i>support@dviinternational.com</li> 
+                                <li> 
+                                    <i class="flaticon-telephone-1"></i>
+                                    <a href="tel:+971569354803">+971 569354803</a>
+                                </li>
+                                <li> 
+                                    <i class="flaticon-email-filled-closed-envelope"></i>
+                                    <a href="mailto:support@dviinternational.com">support@dviinternational.com</a>
+                                </li>
                             </ul>
                         </div>
 

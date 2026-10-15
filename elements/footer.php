@@ -24,7 +24,22 @@
                             </div>
                             <div class="text-holder">
                                 <h3>CALL US</h3>
-                                <p> Head Office: +971 569354803<br></p>
+                                <style>
+                                    .phone-link {
+                                        color: #fff;
+                                        text-decoration: none;
+                                    }
+
+                                    .phone-link:hover{
+                                        text-decoration: none;
+                                        color: #fff;
+                                    }
+                                    .phone-link:focus{
+                                        text-decoration: none;
+                                        color: #fff;
+                                    }
+                                </style>
+                                <p> Head Office: <a href="tel:+971569354803" class="phone-link" >+971 569354803</a><br></p>
                             </div>
                         </div>
                     </div>
@@ -37,7 +52,11 @@
                             </div>
                             <div class="text-holder">
                                 <h3>SEND A MESSAGE</h3>
-                                <p>Email:support@dviinternational.com<br>Website: www.dviinternational.com</p>
+                                <p>
+                                    <a href="mailto:support@dviinternational.com" class="phone-link">Email:support@dviinternational.com</a>
+                                    <br>
+                                    <a href="http://www.dviinternational.com" class="phone-link" target="_blank">Website: www.dviinternational.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>

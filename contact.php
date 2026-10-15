@@ -60,40 +60,19 @@
                             <div class="row clearfix">
 
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                                    <input
-                                        type="text"
-                                        name="username"
-                                        placeholder="Name"
-                                        maxlength="100"
-                                        autocomplete="name"
-                                        required>
+                                    <input type="text" name="username" placeholder="Name" maxlength="100" autocomplete="name" required>
                                 </div>
 
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Email"
-                                        maxlength="254"
-                                        autocomplete="email"
-                                        required>
+                                    <input type="email" name="email" placeholder="Email" maxlength="254" autocomplete="email" required>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <input
-                                        type="text"
-                                        name="subject"
-                                        placeholder="Subject"
-                                        maxlength="200">
+                                    <input type="text" name="subject" placeholder="Subject" maxlength="200">
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <textarea
-                                        name="message"
-                                        placeholder="Message"
-                                        rows="6"
-                                        maxlength="10000"
-                                        required></textarea>
+                                    <textarea name="message" placeholder="Message" rows="6" maxlength="10000" required></textarea>
                                 </div>
 
                                 <!-- Simple anti-bot honeypot -->
@@ -105,11 +84,7 @@
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <button
-                                        class="theme-btn btn-style-one"
-                                        type="submit"
-                                        name="submit-form"
-                                        value="1">
+                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form" value="1">
                                         Submit
                                     </button>
                                 </div>
@@ -127,10 +102,14 @@
                     <h4>Contact Details</h4>
                     <ul class="contact-info">
                         <li>
-                            <div class="icon-box"><span class="fa fa-phone"></span></div>+971 569354803
+                            <div class="icon-box">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <a href="tel:+971569354803">+971 569354803</a>
                         </li>
                         <li>
-                            <div class="icon-box"><span class="fa fa-envelope-o"></span></div>support@dviinternational.com
+                            <div class="icon-box"><span class="fa fa-envelope-o"></span></div>
+                            <a href="mailto:support@dviinternational.com">support@dviinternational.com</a>
                         </li>
                         <li>
                             <div class="icon-box">
