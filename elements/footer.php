@@ -77,11 +77,11 @@
                                     <h3>Services</h3>
 
                                     <ul>
-                                        <li><a href="services-single.html">Financial Analysis</a></li>
-                                        <li><a href="services-single.html">Business Solution</a></li>
-                                        <li><a href="services-single.html">Client Management</a></li>
-                                        <li><a href="services-single.html">Online Consulting</a></li>
-                                        <li><a href="services-single.html">Investment Planning</a></li>
+                                        <li><a href="services-single.php">Financial Analysis</a></li>
+                                        <li><a href="services-single.php">Business Solution</a></li>
+                                        <li><a href="services-single.php">Client Management</a></li>
+                                        <li><a href="services-single.php">Online Consulting</a></li>
+                                        <li><a href="services-single.php">Investment Planning</a></li>
                                     </ul>
                                     
                                 </div>
@@ -119,7 +119,7 @@
                                         <div class="text padd-bott-20">
                                             <p>Signup for our Email</p>
                                         </div>
-                                        <form method="post" action="index.html">
+                                        <form method="post" action="index.php">
                                             <div class="form-group">
                                                 <input type="email" name="useremail" value="" placeholder="Email address" required="">
                                                 <button type="submit" class="theme-btn btn-submit"><span class="fa fa-paper-plane"></span></button>
@@ -153,11 +153,11 @@
                         <!--Bottom Nav-->
                         <nav class="footer-nav clearfix">
                             <ul class="pull-right clearfix">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="privacy-policy.html">Privacy policy</a></li>
-                                <li><a href="terms-conditions.html">Terms &amp; condition</a></li>
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="about.php">About</a></li>
+                                <li><a href="services.php">Services</a></li>
+                                <li><a href="privacy-policy.php">Privacy policy</a></li>
+                                <li><a href="terms-conditions.php">Terms &amp; condition</a></li>
                                 
                             </ul>
                         </nav>
@@ -226,4 +226,4 @@ $(function(){
 </script>
 <script src="assets/js/map-script.js"></script> 
 </body>
-</html>
+</php>
