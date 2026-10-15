@@ -1,111 +1,154 @@
-<?php include_once ('elements/header.php') ?>
+<?php include_once('elements/header.php') ?>
 
-    <style>
-        @media (min-width: 1024px) {
-            .main-header_professional.fixed-header .main-box {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                z-index: 9999;
-            }
+<style>
+    @media (min-width: 1024px) {
+        .main-header_professional.fixed-header .main-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
         }
-    </style>
+    }
+</style>
 
 <div class="page-wrapper">
- 	
-        <!-- Preloader -->
-        <!-- <div class="preloader"></div> -->
-        
-         <?php include_once('elements/header-menu.php'); ?>
-    
+
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+
+    <?php include_once('elements/header-menu.php'); ?>
+
     <!--Page Title-->
     <section class="page-title_professional" style="background-image:url(assets/images/background/4.jpg);">
-    	<div class="auto-container">
-        	<h1>CONTACT US</h1>
+        <div class="auto-container">
+            <h1>CONTACT US</h1>
         </div>
     </section>
-    
+
     <!--Breadcrumb-->
     <div class="breadcrumb-outer_professional">
-    	<div class="auto-container">
-        	<ul class="bread-crumb text-center">
-            	<li><a href="index.html">Home</a> <span class="fa fa-angle-right"></span></li>
+        <div class="auto-container">
+            <ul class="bread-crumb text-center">
+                <li><a href="index.html">Home</a> <span class="fa fa-angle-right"></span></li>
                 <li>CONTACTUS</li>
             </ul>
         </div>
     </div>
     <!--End Page Title-->
-    
+
     <!--Contact Form Section-->
     <section class="contact-form-section">
-    	<div class="auto-container">
+        <div class="auto-container">
             <div class="sec-title centered">
                 <h2>GET IN TOUCH</h2>
                 <div class="separator"></div>
                 <div class="text">The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest</div>
             </div>
-        	<div class="row clearfix">
-            	<!--Form Column-->
+            <div class="row clearfix">
+                <!--Form Column-->
                 <div class="form-column col-md-8 col-sm-8 col-xs-12 pull-right">
-                	
+
                     <!-- contact Form -->
                     <div class="contact-form">
-                            
-                        
+
                         <!--contact Form-->
-                        <form method="post" action="sendemail.php" id="contact-form">
+
+                        <!-- Contact Form -->
+                        <form method="POST" action="contact-submit.php" id="contact-form">
                             <div class="row clearfix">
+
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                                    <input type="text" name="username" placeholder="Name" required>
+                                    <input
+                                        type="text"
+                                        name="username"
+                                        placeholder="Name"
+                                        maxlength="100"
+                                        autocomplete="name"
+                                        required>
                                 </div>
-                                
+
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Email"
+                                        maxlength="254"
+                                        autocomplete="email"
+                                        required>
                                 </div>
-                                
+
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <input type="text" name="subject" placeholder="Subject">
+                                    <input
+                                        type="text"
+                                        name="subject"
+                                        placeholder="Subject"
+                                        maxlength="200">
                                 </div>
-                                
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <textarea name="message" placeholder="Message"></textarea>
+                                    <textarea
+                                        name="message"
+                                        placeholder="Message"
+                                        rows="6"
+                                        maxlength="10000"
+                                        required></textarea>
                                 </div>
-                                
+
+                                <!-- Simple anti-bot honeypot -->
+                                <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                                    <label>
+                                        Leave this field empty
+                                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                    </label>
+                                </div>
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form">Submit</button>
+                                    <button
+                                        class="theme-btn btn-style-one"
+                                        type="submit"
+                                        name="submit-form"
+                                        value="1">
+                                        Submit
+                                    </button>
                                 </div>
-                                
+
                             </div>
                         </form>
-                            
+
+
                     </div>
                     <!--End Contact Form -->
-                    
+
                 </div>
                 <!--image column-->
                 <div class="contact-section col-md-4 col-sm-4 col-xs-12 pull-left">
                     <h4>Contact Details</h4>
-                	<ul class="contact-info">
-                        <li><div class="icon-box"><span class="fa fa-phone"></span></div>+971 569354803</li>
-                        <li><div class="icon-box"><span class="fa fa-envelope-o"></span></div>support@dviinternational.com</li>
-                        <li><div class="icon-box">
-                            <span class="fa fa-map-marker"></span>
-                        </div>
+                    <ul class="contact-info">
+                        <li>
+                            <div class="icon-box"><span class="fa fa-phone"></span></div>+971 569354803
+                        </li>
+                        <li>
+                            <div class="icon-box"><span class="fa fa-envelope-o"></span></div>support@dviinternational.com
+                        </li>
+                        <li>
+                            <div class="icon-box">
+                                <span class="fa fa-map-marker"></span>
+                            </div>
 
-                        <b>DVI INTERNATIONAL FZE LLC</b>
-                        <p>Dubai Address : Business center,sharjah publishing city free zone.sharjah,<br>united Arab Emirates</p>
-                        <b>DVI INTERNATIONAL PTE. LTD.</b>
-                        <p>Singapore Address - 531 Upper Cross street, #02-11,Hong Lim Complex, <br> Singapore-050531</p>
-                    </li>
+                            <b>DVI INTERNATIONAL FZE LLC</b>
+                            <p>Dubai Address : Business center,sharjah publishing city free zone.sharjah,<br>united Arab Emirates</p>
+                            <b>DVI INTERNATIONAL PTE. LTD.</b>
+                            <p>Singapore Address - 531 Upper Cross street, #02-11,Hong Lim Complex, <br> Singapore-050531</p>
+                        </li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </section>
-    
+
     <!-- Google Map Section -->
     <section class="map-section">
         <div class="map-outer">
@@ -114,36 +157,36 @@
     </section>
 
     <style>
-            /* Google Map Section */
-            .map-section {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
+        /* Google Map Section */
+        .map-section {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
 
+        .map-outer {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #f4f4f4;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .map-outer iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 767px) {
             .map-outer {
-                width: 100%;
-                height: 450px;
-                overflow: hidden;
-                border-radius: 12px;
-                background: #f4f4f4;
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+                height: 320px;
+                border-radius: 8px;
             }
-
-            .map-outer iframe {
-                display: block;
-                width: 100%;
-                height: 100%;
-                border: 0;
-            }
-
-            /* Responsive Design */
-            @media (max-width: 767px) {
-                .map-outer {
-                    height: 320px;
-                    border-radius: 8px;
-                }
-            } 
+        }
     </style>
-    
+
     <?php include_once('elements/footer.php'); ?>
